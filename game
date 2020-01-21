@@ -1,0 +1,29 @@
+#Made without functions
+
+import random
+
+num = str(random.randint(1000, 9999))
+a = []
+b = []
+while True:
+    guess = input("Guess a number: ")
+    cows = 0
+    bulls = 0
+    i = 0
+    if guess == 'exit':
+        break
+    while i!=4:
+        if num[i] == guess[i]:
+            cows += 1
+        elif guess[i] in num:
+            bulls+=1
+        i += 1
+    if cows == 4:
+        print("4 cows, 0 bulls \n Correct guess")
+        break
+ 
+
+    print("%d cows, %d bulls" %(cows, bulls))
+    print(num)
+    
+    
